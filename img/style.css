@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bege: #f4e6da;
+    --bege: #e1c3a9;
+}
+@font-face {
+    font-family: Inria Serif;
+    src: url(./fonts/InriaSerif-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Inria Serif;
+    src: url(./InriaSerif-Bold.ttf);
+    font-weight: bolder;
+}
+
+body {
+    background-color: var(--fundo-site);
+}
+
+/*HEADER*/
+header {
+    width: 100%;
+  
+
+}
+
+header>div.container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 290px;
+}
+
+.container-flex {
+    width: 85%;
+    max-width: 1440px;
+    margin-top: auto;
+}
+
+
+#logo {
+    width: 200px;
+}
+
+.links {
+    
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.links a {
+    font-size: 25px;
+    color: var(#000);
+    text-decoration: none;
+}
+
+
+.links a:hover {
+    color: var(#e1c3a9);
+}
+
+#icone-barras,
+#icone-x,
+#menu_botao {
+    display: none;
+}
+
+/*banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-top: auto;
+}*/
+
+#banner {
+   background-image: url(./bannerjoia.jpg);
+   height: 1080px;
+    justify-content:center
+}
