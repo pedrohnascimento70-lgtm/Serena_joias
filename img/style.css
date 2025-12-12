@@ -1,89 +1,261 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --bege: #f4e6da;
-    --bege: #e1c3a9;
-}
-@font-face {
-    font-family: Inria Serif;
-    src: url(./fonts/InriaSerif-Regular.ttf);
-    font-weight: 400;
-}
-@font-face {
-    font-family: Inria Serif;
-    src: url(./InriaSerif-Bold.ttf);
-    font-weight: bolder;
+    font-family: "Georgia", serif;
 }
 
 body {
-    background-color: var(--fundo-site);
+    background: #545353;
 }
 
-/*HEADER*/
-header {
-    width: 100%;
-  
-
+/* CONTAINER GERAL PARA CENTRALIZAR EM TELAS MAIORES */
+.container {
+    width: 70%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-header>div.container-flex {
+/* HEADER */
+.top-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 290px;
+    padding: 18px 40px;
+    background: #000;
+    color: white;
 }
 
-.container-flex {
-    width: 85%;
-    max-width: 1440px;
-    margin-top: auto;
+.top-header .logo {
+    height: 130px;
 }
 
-
-#logo {
-    width: 200px;
-}
-
-.links {
+.icons img {
+    width: 28px;
+    margin-left: 16px;
+    cursor: pointer;
+   
     
-    display: flex;
-    align-items: center;
-    gap: 20px;
+
+    
+}
+.icons img:hover {
+filter: brightness(0) saturate(100%) invert(74%) sepia(56%) saturate(617%) hue-rotate(6deg) brightness(94%) contrast(92%);
+cursor: pointer;
+}
+/* HERO */
+.hero {
+    position: relative;
 }
 
-
-.links a {
-    font-size: 25px;
-    color: var(#000);
-    text-decoration: none;
-}
-
-
-.links a:hover {
-    color: var(#e1c3a9);
-}
-
-#icone-barras,
-#icone-x,
-#menu_botao {
-    display: none;
-}
-
-/*banner img{
+.hero-img {
     width: 100%;
-    height: 100%;
+    max-height: 800px;
     object-fit: cover;
-    object-position: center;
-    display: block;
-    margin-top: auto;
-}*/
+  
+    
+    
+}
 
-#banner {
-   background-image: url(./bannerjoia.jpg);
-   height: 1080px;
-    justify-content:center
+.hero-text {
+    position: absolute;
+    bottom: 60px;
+    left: 50px;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro-img {
+    width: 1110%;
+    max-width: 800px;
+    border-radius: 6px;
+}
+
+.intro h2 {
+    margin: 20px 0 12px;
+    font-size: 2rem;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* CARDS */
+.duo-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 0;
+}
+
+.card {
+    width: 220px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card button {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* WIDE IMAGE */
+.wide-image img {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: block;
+}
+
+/* CARROSSEL */
+.carrosel {
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.carrosel-track {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    top: 45%;
+    background: transparent;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+}
+
+.left { left: 30px; }
+.right { right: 30px; }
+
+.dots {
+    margin-top: 12px;
+}
+
+
+
+
+/* COLLECTION */
+.collection {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    justify-items: center;
+}
+
+.collection-grid img {
+    width: 140px;
+    border-radius: 6px;
+}
+
+.collection p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+/* NEWSLETTER */
+.newsletter {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.newsletter input {
+    width: 360px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    padding: 12px 25px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.privacy {
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+    background: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-logo {
+    width: 220px; 
+}
+
+.social img {
+    width: 30px;
+    margin: 15px;
+}
+button{
+cursor: pointer;
+    border:none;
+    background:#d4af37;
+    color:rgb(0, 0, 0);
+
+    cursor:pointer;
+}
+
+button:hover{
+    background:#b9952c;
+}
+
+.parallax {
+ margin-top: 150px;
+ height: 250px;
+ background-image: url(./FUNDO.svg);
+ background-attachment: fixed;
+ background-size: 30%;
+ margin-bottom: 120px;
+
 }
